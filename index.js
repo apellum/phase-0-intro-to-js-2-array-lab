@@ -1,26 +1,19 @@
-const cats = ["Milo", "Otis", "Garfield"]
+const cats = ['Milo', 'Otis', 'Garfield'];
 
-function destructivelyAppendCat() {
-return cats.push(`Ralph`)
+const destructivelyAppendCat = name => { 
+    cats.push(name);
 }
-function destructivelyPrependCat() {
-    return cats.unshift(`Bob`)
-}
-function destructivelyRemoveLastCat() {
-    return cats.pop(-1)
-}
-function destructivelyRemoveFirstCat() {
-    return cats.shift()
-}
-function appendCat() {
-    return [...cats, `Broom`]
-}
-function prependCat() {
-    return [`Arnold`, ...cats]
-}
-function removeLastCat() {
-    return cats.slice(0,-1)
-}
-function removeFirstCat() {
-    return cats.slice(1)
-}
+
+const destructivelyPrependCat = name => cats.unshift(name)
+
+const destructivelyRemoveLastCat = name => cats.pop(name)
+
+const destructivelyRemoveFirstCat = name => cats.shift(name)
+
+const appendCat = name => [...cats, name]
+
+const prependCat = name => [name, ...cats]
+
+const removeLastCat = name => cats.slice(0, -1)
+
+const removeFirstCat = name => cats.slice(1)
