@@ -17,3 +17,5 @@ const prependCat = name => [name, ...cats]
 const removeLastCat = name => cats.slice(0, -1)
 
 const removeFirstCat = name => cats.slice(1)
+
+console.log(appendCat)
